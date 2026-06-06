@@ -15145,7 +15145,7 @@ a.btn-slider:hover {
   margin: 0 6px;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 
 .testi-slider .flex-control-paging li a {
@@ -15429,6 +15429,55 @@ img {
   border-right: 2px solid gold;
   border-top: 2px solid gold;
   animation: anim4 900ms linear infinite;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  padding: 10px 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.arrow:hover {
+  transform: translateY(-50%) scale(1.15);
+}
+
+
+.arrow-left {
+  left: 2px;
+}
+
+.arrow-right {
+  right: 2px;
+}
+
+.keen-slider__slide {
+  min-width: 280px;
+}
+
+.skeleton-box {
+  background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
 }
 
 @keyframes anim4 {
@@ -16283,6 +16332,8 @@ img {
   .de-table.table-rank tbody td:nth-child(6) {
     display: none;
   }
+
+
 
   .d_profile {
     display: block;
