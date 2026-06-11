@@ -11,7 +11,24 @@ import axios from "axios";
 function App() {
   const [users, setUsers] = useState([]);
   const [newItems, setNewItems] = useState([]);
-    const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true)
+  const [topSellers, setTopSellers] = useState([]);
+
+  useEffect(() => {
+    const fetchSellers = async () => {
+      try {
+        const response = await axios.get("https://us-central1-nft-cloud-functions.cloudfunctions.net/topSellers")
+
+        setTopSellers(response.data)
+      }catch (error) {
+        console.log(error)
+      }finally {
+        setLoading(false)
+      }
+    }
+
+    fetchSellers()
+  }, [])
 
   useEffect(() => {
     const fetchNewItems = async () => {
@@ -51,7 +68,7 @@ function App() {
     <Router>
       <Nav />
       <Routes>
-        <Route path="/" element={<Home users={users} loading={loading} newItems={newItems}/>} />
+        <Route path="/" element={<Home users={users} loading={loading} newItems={newItems} topSellers={topSellers}/>} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/author/:id" element={<Author />} />
         <Route path="/item-details/:id" element={<ItemDetails users={users} newItems={newItems}/>} />
