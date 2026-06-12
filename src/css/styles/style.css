@@ -15537,6 +15537,13 @@ img {
   padding: 1px 10px;
 }
 
+.author-skeleton-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
 @keyframes shimmer {
   from {
     background-position: 200% 0;
