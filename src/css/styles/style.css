@@ -15524,6 +15524,19 @@ img {
   animation: shimmer 1.5s infinite;
 }
 
+.skeleton-likes {
+  width: 30%;
+  height: 18px;
+  margin-top: 12px;
+  border-radius: 4px;
+}
+
+.skeleton-countdown {
+  position: absolute;
+  right: 20px;
+  padding: 1px 10px;
+}
+
 @keyframes shimmer {
   from {
     background-position: 200% 0;

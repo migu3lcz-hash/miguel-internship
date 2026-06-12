@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import NewItemsSkeleton from "./NewItemsSkeleton";
 import { useKeenSlider } from "keen-slider/react";
@@ -36,7 +36,7 @@ const NewItems = ({ newItems, loading }) => {
   })
 
 
-  const [now, setNow] = React.useState(Date.now())
+  const [now, setNow] = useState(Date.now())
 
   React.useEffect(() => {
     const interval = setInterval(() => {
