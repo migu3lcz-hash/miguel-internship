@@ -15469,9 +15469,9 @@ img {
 }
 
 .skeleton-shimmer {
-  background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
+  background: linear-gradient(90deg, #e5e7eb 45%, #f3f4f6 50%, #e5e7eb 55%);
+  background-size: 300% 100%;
+  animation: shimmer-skeleton 1.5s infinite;
 }
 
 .author_pp_skeleton {
@@ -15518,11 +15518,6 @@ img {
   height: 441px;
 }
 
-.skeleton-box {
-  background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-}
 
 .skeleton-likes {
   width: 30%;
@@ -15544,13 +15539,13 @@ img {
   margin-bottom: 12px;
 }
 
-@keyframes shimmer {
+@keyframes shimmer-skeleton {
   from {
-    background-position: 200% 0;
+    background-position: 100% 0;
   }
 
   to {
-    background-position: -200% 0;
+    background-position: 0% 0;
   }
 }
 

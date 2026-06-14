@@ -11,7 +11,7 @@ const AuthorItems = ({ authorDataItems, authorImage, loading }) => {
   return (
     <div className="de_tab_content">
       <div className="tab-1">
-        <div className="row">
+        <div className="row" data-aos="fade-in" data-aos-delay="50">
           {loading ? Array.from({ length: 8 }).map((_, index) => {
             return <AuthorItemsSkeleton key={index}/> }) : authorDataItems.map((item) => (
             <div className="col-lg-3 col-md-6 col-sm-6 col-xs-12" key={item.id}>

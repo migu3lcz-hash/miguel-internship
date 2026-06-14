@@ -1,3 +1,5 @@
+import AOS from "aos";
+import 'aos/dist/aos.css'
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Explore from "./pages/Explore";
@@ -13,6 +15,13 @@ function App() {
   const [newItems, setNewItems] = useState([]);
   const [loading, setLoading] = useState(true)
   const [topSellers, setTopSellers] = useState([]);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  }, [])
 
   useEffect(() => {
     const fetchSellers = async () => {
@@ -70,7 +79,7 @@ function App() {
         <Route path="/" element={<Home users={users} loading={loading} newItems={newItems} topSellers={topSellers}/>} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/author/:id" element={<Author />} />
-        <Route path="/item-details/:id" element={<ItemDetails users={users} newItems={newItems}/>} />
+        <Route path="/item-details/:nftId" element={<ItemDetails users={users} newItems={newItems}/>} />
       </Routes>
       <Footer />
     </Router>
