@@ -83,6 +83,7 @@ const ExploreItems = () => {
 
   return (
     <>
+    <div className="row" data-aos="fade-in">
       <div>
         <select value={filter} onChange={handleFilterChange} id="filter-items">
           <option value="">Default</option>
@@ -169,6 +170,7 @@ const ExploreItems = () => {
           </Link>
         </div>
       )}
+      </div>
     </>
   );
 };

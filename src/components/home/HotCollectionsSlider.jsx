@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import SkeletonSlide from './SkeletonSlide.jsx'
 
-export default ({ users }) => {
+const HotCollectionsSlider = ({ users }) => {
     const [loading, setLoading] = useState(true)
 
   const [sliderRef, instanceRef] = useKeenSlider({
@@ -44,7 +44,7 @@ export default ({ users }) => {
 
   useEffect(() => {
     instanceRef.current?.update();
-  }, [loading, users])
+  }, [loading, users, instanceRef])
 
   useEffect(() => {
     if (users?.length > 0) {
@@ -89,10 +89,7 @@ export default ({ users }) => {
             <FontAwesomeIcon icon={faChevronRight} />
         </button>
         </div>
-    // <div ref={sliderRef} className="keen-slider">
-    //   <div className="keen-slider__slide">1</div>
-    //   <div className="keen-slider__slide">2</div>
-    //   <div className="keen-slider__slide">3</div>
-    // </div>
   )
 }
+
+export default HotCollectionsSlider

@@ -6,7 +6,7 @@ import HotCollectionsSlider from "./HotCollectionsSlider";
 
 const HotCollections = ({ users }) => {
   return (
-    <section id="section-collections" className="no-bottom">
+    <section id="section-collections" className="no-bottom" data-aos="fade-in" data-aos-offset="300">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

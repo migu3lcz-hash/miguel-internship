@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import AuthorImage from "../../images/author_thumbnail.jpg";
-import axios from "axios";
 import TopSellersSkeleton from "./TopSellersSkeleton";
 
 const TopSellers = ({ topSellers, loading }) => {
   
-  console.log(topSellers)
-
   return (
-    <section id="section-popular" className="pb-5">
+    <section id="section-popular" className="pb-5" data-aos="fade-in" data-aos-offset="300">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

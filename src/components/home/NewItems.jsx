@@ -68,7 +68,7 @@ const NewItems = ({ newItems, loading }) => {
 
 
   return (
-    <section id="section-items" className="no-bottom">
+    <section id="section-items" className="no-bottom" data-aos="fade-in" data-aos-offset="300">
       <div className="container slider-wrapper">
           <button className="arrow arrow-left" onClick={() => instanceRef.current?.prev()}>
             <FontAwesomeIcon icon={faChevronLeft} />
